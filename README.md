@@ -1,4 +1,4 @@
-# ProjetGL
+# Projet Génie Logiciel
 
 Membres du groupe : 
 - Ravier Sébastien (chef de projet)
