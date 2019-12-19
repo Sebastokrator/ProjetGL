@@ -1,18 +1,26 @@
 public interface lotCereales{
         
     int idProduit = -1;
+    String type ="";
     String provenance ="";
     String destination = "";
     double volume = 0; 
+    double poids = 0;
     
-    public int getIdProduit();
-    public String getProvenance();
-    public String getDestination();
-    public int getVolume();
+    int getIdProduit();
+    String getProvenance();
+    String getDestination();
+    double getVolume();
+    double getPoids();
     
-    public void setIdProduit(int id);
-    public void setProvenance(String p);
-    public void setDestination(String d);
-    public void setVolume(int v);
+    /*
+    void setIdProduit(int id);
+    void setProvenance(String p);
+    void setDestination(String d);
+    void setVolume(double v);
+    void setPoids(double p);
+    */
+    
+    String getType();
     
 }
