@@ -41,6 +41,20 @@ public class Silo extends Observable {
     public int getMax() {
             return max;
     }
+    
+    public int getCellulesDisponibles() {
+        int res = 0;
+        
+        for(int i=0; i<this.listeCellules.size(); i++)
+            if(this.listeCellules.get(i).isUtilisee())
+                res++;
+        
+        this.cellulesDisponibles -= res;
+        
+        return this.cellulesDisponibles;
+        
+    }
+
 
     public int getNbElements() {
             return listeCellules.size();
@@ -54,6 +68,30 @@ public class Silo extends Observable {
     public boolean estVide() {
             if(getNbElements()==0) return true;
             return false;
+    }
+    
+    public ArrayList<lotCereales> getCereales(){
+        
+        ArrayList<lotCereales> res = new ArrayList<lotCereales>();
+        
+        for(int i=0; i< this.listeCellules.size(); i++)
+        {
+            if(this.listeCellules.get(i).isUtilisee() == true)
+                res.add(this.listeCellules.get(i).getProduit());
+        }
+        
+        return res;
+    }
+    
+    public boolean ajouterCereales(lotCereales lc){
+        
+       if(cellulesDisponibles > 0){
+           this.listeCellules.get(listeCellules.size()-cellulesDisponibles).setProduit(lc);
+           this.cellulesDisponibles--;
+           return true;
+       }
+       else
+        return false;
     }
     
     

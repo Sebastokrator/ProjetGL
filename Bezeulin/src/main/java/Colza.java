@@ -1,4 +1,4 @@
-public class Orge extends lotCereales{
+public class Colza extends lotCereales{
 
 
     @Override
@@ -25,7 +25,7 @@ public class Orge extends lotCereales{
     public void setPoids(double p){this.poids=p;};
     
     
-    public String getType(){return "Orge";}
+    public String getType(){return "Colza";}
     
     
 }

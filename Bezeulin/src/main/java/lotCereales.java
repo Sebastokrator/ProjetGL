@@ -1,4 +1,4 @@
-public interface lotCereales{
+public abstract class lotCereales{
         
     int idProduit = -1;
     String type ="";
@@ -7,20 +7,20 @@ public interface lotCereales{
     double volume = 0; 
     double poids = 0;
     
-    int getIdProduit();
-    String getProvenance();
-    String getDestination();
-    double getVolume();
-    double getPoids();
+    abstract int getIdProduit();
+    abstract String getProvenance();
+    abstract String getDestination();
+    abstract double getVolume();
+    abstract double getPoids();
     
-    /*
-    void setIdProduit(int id);
-    void setProvenance(String p);
-    void setDestination(String d);
-    void setVolume(double v);
-    void setPoids(double p);
-    */
     
-    String getType();
+    abstract void setIdProduit(int id);
+    abstract void setProvenance(String p);
+    abstract void setDestination(String d);
+    abstract void setVolume(double v);
+    abstract void setPoids(double p);
+    
+    
+    abstract String getType();
     
 }
